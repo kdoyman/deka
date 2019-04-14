@@ -12,5 +12,7 @@ namespace tip4trip_2.Models
         public T4TContext() : base(connectionString){}
 
         public DbSet<House> Houses { get; set; }
+        
+
     }
 }

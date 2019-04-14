@@ -143,6 +143,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\House.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\T4TContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
