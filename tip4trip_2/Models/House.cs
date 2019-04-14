@@ -12,7 +12,8 @@ namespace tip4trip_2.Models
         [Required(ErrorMessage ="Give the Address please !")]
         public string Address { get; set; }
         
-
+        [DataType(DataType.Date)]
+        [Display(Name ="bale")]
         [DisplayFormat(DataFormatString ="{0:dd-MM-yyyy}",ApplyFormatInEditMode =true)]
         public DateTime DateToRent { get; set; }
     }
