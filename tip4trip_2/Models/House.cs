@@ -17,7 +17,9 @@ namespace tip4trip_2.Models
         [Display(Name ="bale")]
         [DisplayFormat(DataFormatString ="{0:dd-MM-yyyy}",ApplyFormatInEditMode =true)]//jjkkk
         public DateTime DateToRent { get; set; }
-       // public Location MyLocation { get; set; }
-       // public int MyLocationId { get; set; }
+
+        public Location Location { get; set; }
+        [Display(Name = "Location")]
+        public int LocationId { get; set; }
     }
 }

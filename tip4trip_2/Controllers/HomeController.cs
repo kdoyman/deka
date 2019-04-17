@@ -13,13 +13,15 @@ namespace tip4trip_2.Controllers
 
         public ActionResult Index(string searching)
         {
+
+            
             return View(db.Houses.Where(x=>x.Address.Contains(searching) || searching==null).ToList());
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.not";
-
+           
             return View();
         }
 

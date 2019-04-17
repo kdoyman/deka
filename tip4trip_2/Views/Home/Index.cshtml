@@ -11,7 +11,7 @@
 
     <thead>
         <tr>
-            <th>House Id</th>
+            <th>House Location</th>
             <th>House Address</th>
             <th>House Dates</th>
         </tr>
@@ -30,7 +30,8 @@
             foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.Id </td>
+                    <td>@item.Location</td>
+                   
                     <td>@item.Address </td>
                     <td>@item.DateToRent </td>
                 </tr>
@@ -50,6 +51,7 @@
 
             <h2>Tip4Trip</h2>
             <p>@Html.ActionLink("Houses", "Index", "Houses")</p>
+            
 
             <p class="lead">Tip4Trip is the new AirBnB for northern Greece</p>
             <p><a href="https://www.google.com" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>

@@ -134,6 +134,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HousesController.cs" />
+    <Compile Include="Controllers\LocationsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -148,6 +149,10 @@
     <Compile Include="Migrations\201904171744300_Me_lathos.cs" />
     <Compile Include="Migrations\201904171744300_Me_lathos.Designer.cs">
       <DependentUpon>201904171744300_Me_lathos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904172005214_location.cs" />
+    <Compile Include="Migrations\201904172005214_location.Designer.cs">
+      <DependentUpon>201904172005214_location.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Availability.cs" />
@@ -197,6 +202,11 @@
     <Content Include="Views\Houses\Details.cshtml" />
     <Content Include="Views\Houses\Edit.cshtml" />
     <Content Include="Views\Houses\Index.cshtml" />
+    <Content Include="Views\Locations\Create.cshtml" />
+    <Content Include="Views\Locations\Delete.cshtml" />
+    <Content Include="Views\Locations\Details.cshtml" />
+    <Content Include="Views\Locations\Edit.cshtml" />
+    <Content Include="Views\Locations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -223,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904171744300_Me_lathos.resx">
       <DependentUpon>201904171744300_Me_lathos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904172005214_location.resx">
+      <DependentUpon>201904172005214_location.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -10,109 +10,107 @@ using tip4trip_2.Models;
 
 namespace tip4trip_2.Controllers
 {
-    public class HousesController : Controller
+    public class LocationsController : Controller
     {
         private T4TContext db = new T4TContext();
 
-        // GET: Houses
+        // GET: Locations
         public ActionResult Index()
         {
-            var houseview = db.Houses.Include(mn => mn.Location);
-            return View(houseview);
+            return View(db.Locations.ToList());
         }
 
-        // GET: Houses/Details/5
+        // GET: Locations/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            House house = db.Houses.Find(id);
-            if (house == null)
+            Location location = db.Locations.Find(id);
+            if (location == null)
             {
                 return HttpNotFound();
             }
-            return View(house);
+            return View(location);
         }
 
-        // GET: Houses/Create
+        // GET: Locations/Create
         public ActionResult Create()
         {
-            ViewBag.LocationId = new SelectList(db.Locations, "Id", "nameloc");
             return View();
         }
 
-        // POST: Houses/Create
+        // POST: Locations/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Address,DateToRent,LocationId")] House house)
+        public ActionResult Create([Bind(Include = "Id,nameloc")] Location location)
         {
             if (ModelState.IsValid)
             {
-                db.Houses.Add(house);
+                db.Locations.Add(location);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.LocationId = new SelectList(db.Locations, "Id", "nameloc", house.LocationId);
-            return View(house);
+
+            return View(location);
         }
 
-        // GET: Houses/Edit/5
+        // GET: Locations/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            House house = db.Houses.Find(id);
-            if (house == null)
+            Location location = db.Locations.Find(id);
+            if (location == null)
             {
                 return HttpNotFound();
             }
-            return View(house);
+            return View(location);
         }
 
-        // POST: Houses/Edit/5
+        // POST: Locations/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Address,DateToRent")] House house)
+        public ActionResult Edit([Bind(Include = "Id,nameloc")] Location location)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(house).State = EntityState.Modified;
+                db.Entry(location).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(house);
+            return View(location);
         }
 
-        // GET: Houses/Delete/5
+        // GET: Locations/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            House house = db.Houses.Find(id);
-            if (house == null)
+            Location location = db.Locations.Find(id);
+            if (location == null)
             {
                 return HttpNotFound();
             }
-            return View(house);
+            return View(location);
         }
 
-        // POST: Houses/Delete/5
+        // POST: Locations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            House house = db.Houses.Find(id);
-            db.Houses.Remove(house);
+            Location location = db.Locations.Find(id);
+            db.Locations.Remove(location);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
