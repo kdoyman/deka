@@ -150,6 +150,7 @@
       <DependentUpon>201904171744300_Me_lathos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Availability.cs" />
     <Compile Include="Models\House.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\T4TContext.cs" />
