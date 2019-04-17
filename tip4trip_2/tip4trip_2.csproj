@@ -141,6 +141,14 @@
     <Compile Include="Migrations\201904141400390_KostasInit.Designer.cs">
       <DependentUpon>201904141400390_KostasInit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904171655042_tetarth17.cs" />
+    <Compile Include="Migrations\201904171655042_tetarth17.Designer.cs">
+      <DependentUpon>201904171655042_tetarth17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904171744300_Me_lathos.cs" />
+    <Compile Include="Migrations\201904171744300_Me_lathos.Designer.cs">
+      <DependentUpon>201904171744300_Me_lathos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\House.cs" />
     <Compile Include="Models\Location.cs" />
@@ -208,6 +216,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904141400390_KostasInit.resx">
       <DependentUpon>201904141400390_KostasInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904171655042_tetarth17.resx">
+      <DependentUpon>201904171655042_tetarth17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904171744300_Me_lathos.resx">
+      <DependentUpon>201904171744300_Me_lathos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
