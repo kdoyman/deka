@@ -7,13 +7,13 @@ namespace tip4trip_2.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Deca : IMigrationMetadata
+    public sealed partial class tetarth17 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Deca));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(tetarth17));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904181620157_Deca"; }
+            get { return "201904171655042_tetarth17"; }
         }
         
         string IMigrationMetadata.Source
