@@ -67,6 +67,7 @@ namespace tip4trip_2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            ViewBag.LocationId = new SelectList(db.Locations, "Id", "nameloc");
             House house = db.Houses.Find(id);
             if (house == null)
             {
@@ -80,7 +81,7 @@ namespace tip4trip_2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Address,DateToRent")] House house)
+        public ActionResult Edit([Bind(Include = "Id,Address,DateToRent,LocationId")] House house)
         {
             if (ModelState.IsValid)
             {
@@ -88,6 +89,7 @@ namespace tip4trip_2.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.LocationId = new SelectList(db.Locations, "Id", "nameloc", house.LocationId);
             return View(house);
         }
 

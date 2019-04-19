@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using tip4trip_2.Models;
-
+using System.Data.Entity;
 namespace tip4trip_2.Controllers
 {
     public class HomeController : Controller
@@ -15,7 +15,7 @@ namespace tip4trip_2.Controllers
         {
 
             
-            return View(db.Houses.Where(x=>x.Address.Contains(searching) || searching==null).ToList());
+            return View(db.Houses.Include(mmn => mmn.Location).Where(x => x.Location.nameloc.Contains(searching) || searching==null).ToList());
         }
 
         public ActionResult About()

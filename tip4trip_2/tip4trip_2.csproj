@@ -154,10 +154,15 @@
     <Compile Include="Migrations\201904172005214_location.Designer.cs">
       <DependentUpon>201904172005214_location.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904182331029_allh.cs" />
+    <Compile Include="Migrations\201904182331029_allh.Designer.cs">
+      <DependentUpon>201904182331029_allh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Availability.cs" />
     <Compile Include="Models\House.cs" />
     <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\T4TContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -236,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904172005214_location.resx">
       <DependentUpon>201904172005214_location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904182331029_allh.resx">
+      <DependentUpon>201904182331029_allh.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
